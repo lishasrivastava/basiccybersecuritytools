@@ -2,7 +2,9 @@
 These are just some basic cybersecurity tools as a side project to learn from.
 
 Current:
-1. Port scanner: A tool to scan a network for open ports on various machines.
+1. Port scanner: A tool to scan a given website URL for open ports. The program imports the "socket" library to create a socket object, which it uses to establish connections to the target URL on various ports in the range from 1 to 1024.
+
+
 
 Future/In Progress:
 2. Vulnerability scanner: A tool that checks a network or system for vulnerabilities and reports them.
