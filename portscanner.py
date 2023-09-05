@@ -1,7 +1,7 @@
 import socket
 
 #prompting user for the website URL they want to scan
-target = input("Enter website URL to scan: ")
+target = input("Enter the website URL you'd like to scan: ")
 
 #set the range of the ports we'll scan
 port_range = range(1, 1025)
