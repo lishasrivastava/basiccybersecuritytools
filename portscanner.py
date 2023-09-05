@@ -1,18 +1,18 @@
 import socket
 
-# Prompt user for website URL to scan
+#prompting user for the website URL they want to scan
 target = input("Enter website URL to scan: ")
 
-# Define the range of ports to scan
+#set the range of the ports we'll scan
 port_range = range(1, 1025)
 
-# Create a socket object
+#creating a socket object
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
-# Set a timeout for the socket connection
+#set the timeout for the socket connection
 s.settimeout(5)
 
-# Function to check if a port is open
+#function scan_port(port) -> bool, checks if a port is open
 def scan_port(port):
     try:
         s.connect((target, port))
@@ -20,12 +20,12 @@ def scan_port(port):
     except:
         return False
 
-# Scan all ports in the range
+#scan all the ports in the range to check if a port is open or not
 for port in port_range:
     if scan_port(port):
         print("Port {} is open".format(port))
     else:
         print("Port {} is closed".format(port))
 
-# Close the socket connection
+#close the socket connection
 s.close()
